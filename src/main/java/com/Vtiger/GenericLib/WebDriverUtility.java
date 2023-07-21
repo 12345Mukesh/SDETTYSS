@@ -1,8 +1,12 @@
 package com.Vtiger.GenericLib;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
+import javax.imageio.ImageIO;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
@@ -15,6 +19,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategy;
+
+
+
 public class WebDriverUtility
 {
 	 /**
@@ -22,6 +33,8 @@ public class WebDriverUtility
      * Description This method is going to work as implicity wait
      * @param  WebDriver driver
      */
+	
+	
 	public void pageloadtimeout(WebDriver driver)
 	{
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
@@ -208,5 +221,24 @@ public class WebDriverUtility
 		 JavascriptExecutor jse= (JavascriptExecutor) driver;
 			jse.executeScript("window.scrollBy"+Element);
 	 }
+	 
+	 
+	public String getFullPageScreenshot(String name) throws IOException
+	{
+		 Screenshot screen= new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(Baseclass.driver);
+			
+		   String File="./ScreenShot/VTigerScreenshot.png";
+			try {
+				ImageIO.write(screen.getImage(), "PNG", new File(File));
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		
+		return File;
+		
+	}
 
 }

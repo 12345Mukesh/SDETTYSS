@@ -8,6 +8,9 @@
 		<jre.level>1.8</jre.level>
 		<jdk.level>1.8</jdk.level>
   </properties>
+  <profiles>
+  <profile>
+  <id>Smoketest</id>
   	<build>
 		<plugins>
 			<!-- Compiler plug-in -->
@@ -27,12 +30,15 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
-						<suiteXmlFile>testngVtiger.xml</suiteXmlFile>
+						<suiteXmlFile>CreateContactTest.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+  </profile>
+  </profiles>
+	
   <dependencies>
   
   
@@ -60,6 +66,21 @@
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
     <version>7.4.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->
+<dependency>
+    <groupId>ru.yandex.qatools.ashot</groupId>
+    <artifactId>ashot</artifactId>
+    <version>1.5.3</version>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.3.3</version>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->

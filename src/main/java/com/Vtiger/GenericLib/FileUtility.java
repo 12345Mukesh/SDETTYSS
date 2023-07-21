@@ -27,14 +27,16 @@ public class FileUtility
 	 * @throws Throwable 
 	 * @throws IOException
 	 */
-	public String readDatafromPropfile(String path , String key) throws Throwable 
+	public String readDatafromPropfile( String key) throws Throwable 
 	{
-		FileInputStream fis = new FileInputStream(path);
+		FileInputStream fis = new FileInputStream(IAutoConstant.PROP_PATH);
 		Properties prop = new Properties();
 		prop.load(fis);
 
-		return prop.getProperty(key, "Incorrectkey");
+		return prop.getProperty(key,"Incorrectkey");
 	}
+
+	
 
 		
 		

@@ -4,7 +4,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Vtiger.GenericLib.Baseclass;
@@ -15,7 +17,7 @@ import ObjectRepo.CreateNewOrg;
 import ObjectRepo.HomePage;
 import ObjectRepo.OrgInfoPage;
 
-
+@Listeners(com.Vtiger.GenericLib.ReportListeners.class)
 
 public class Tc_001_CreateOrg_DD_Test extends Baseclass
 {
@@ -76,7 +78,7 @@ public class Tc_001_CreateOrg_DD_Test extends Baseclass
 
 		System.out.println(actualelement.isDisplayed());
 
-		AssertJUnit.assertEquals(actualelement.isDisplayed(), true);
+		Assert.assertEquals(actualelement.isDisplayed(), true);
 
 
 

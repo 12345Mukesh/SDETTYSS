@@ -40,7 +40,7 @@ public class Tc_001_CreateContact_Email_Test
 		FileUtility flib= new FileUtility();
 		ExcelUtility Elib= new ExcelUtility();
 		//open the browser
-		String browsername = flib.readDatafromPropfile(IAutoConstant.PROP_PATH,"browser");
+		String browsername = flib.readDatafromPropfile("browser");
 		if (browsername.equals("chrome")) {
 			driver = new ChromeDriver();
 			System.out.println("chrome is opened");
@@ -51,7 +51,7 @@ public class Tc_001_CreateContact_Email_Test
 		}
 		
 		//Enter the url
-		driver.get(flib.readDatafromPropfile(IAutoConstant.PROP_PATH,"url"));
+		driver.get(flib.readDatafromPropfile("url"));
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);           
 		driver.manage().window().maximize();                                       

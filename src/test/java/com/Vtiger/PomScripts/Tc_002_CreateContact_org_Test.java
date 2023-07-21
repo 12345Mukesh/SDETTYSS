@@ -6,6 +6,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Vtiger.GenericLib.Baseclass;
@@ -16,7 +17,7 @@ import ObjectRepo.CreateNewContactPage;
 import ObjectRepo.HomePage;
 
 
-
+@Listeners(com.Vtiger.GenericLib.ReportListeners.class)
 public class Tc_002_CreateContact_org_Test extends Baseclass {
 
 	@Test

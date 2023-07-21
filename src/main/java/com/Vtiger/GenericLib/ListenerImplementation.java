@@ -39,7 +39,7 @@ public class ListenerImplementation implements ITestListener
 		String failedTestCase = result.getMethod().getMethodName();
 		String currentDate = new Date().toString().replace(":", "_").replace(" ", "_");
 		
-		/*
+		
 		EventFiringWebDriver ed=new EventFiringWebDriver(Baseclass.sdriver);
 		File src = ed.getScreenshotAs(OutputType.FILE);
 		File dest = new File("./screenshot/"+failedTestCase+currentDate+".PNG");
@@ -49,8 +49,9 @@ public class ListenerImplementation implements ITestListener
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		*/
 		
+		
+		/*
 		  Screenshot screen= new AShot().shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(Baseclass.sdriver);
 			
 		  
@@ -63,7 +64,7 @@ public class ListenerImplementation implements ITestListener
 		
 		   Reporter.log("Screenshot of Failed Testscript is stored in Screenshot Folder");
 		
-		
+		*/
 	}
     
 }

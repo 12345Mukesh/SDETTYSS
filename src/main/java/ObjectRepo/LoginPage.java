@@ -51,8 +51,8 @@ public class LoginPage implements IAutoConstant
 	
 	public void logintoApp() throws Throwable  	//Rule 6 Use Business libraries
 	{
-		usernametxtfld.sendKeys(fileutility.readDatafromPropfile(IAutoConstant.PROP_PATH,"username"));
-		passwordtxtfld.sendKeys(fileutility.readDatafromPropfile(PROP_PATH, "password"));
+		usernametxtfld.sendKeys(fileutility.readDatafromPropfile("username"));
+		passwordtxtfld.sendKeys(fileutility.readDatafromPropfile("password"));
 		loginbtn.click();
 	}
 	

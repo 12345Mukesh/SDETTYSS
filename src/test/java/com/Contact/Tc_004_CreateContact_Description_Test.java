@@ -1,4 +1,4 @@
-package com.contact;
+package com.Contact;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,13 +17,16 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.Vtiger.Generic.ExcelUtility;
-import com.Vtiger.Generic.FileUtility;
-import com.Vtiger.Generic.WebDriverUtility;
-import com.Vtiger.ObjectRepo.ContactInfopage;
-import com.Vtiger.ObjectRepo.CreateNewContactPage;
-import com.Vtiger.ObjectRepo.HomePage;
-import com.Vtiger.ObjectRepo.LoginPage;
+import com.Vtiger.GenericLib.ExcelUtility;
+import com.Vtiger.GenericLib.FileUtility;
+import com.Vtiger.GenericLib.IAutoConstant;
+import com.Vtiger.GenericLib.WebDriverUtility;
+
+import ObjectRepo.ContactInfopage;
+import ObjectRepo.CreateNewContactPage;
+import ObjectRepo.HomePage;
+import ObjectRepo.LoginPage;
+
 
 public class Tc_004_CreateContact_Description_Test
 {

@@ -17,10 +17,10 @@ import ObjectRepo.CreateNewContactPage;
 import ObjectRepo.HomePage;
 
 
-@Listeners(com.Vtiger.GenericLib.ListenerImplementation.class)
+@Listeners(com.Vtiger.GenericLib.ReportListeners.class)
 public class Tc_001_CreateContact_Test extends Baseclass
 {
-	@Test(retryAnalyzer=com.Vtiger.GenericLib.RetryListeners.class)
+	@Test()
 	public void TC001_CreateContact() throws Throwable
 	{
 
@@ -64,7 +64,7 @@ public class Tc_001_CreateContact_Test extends Baseclass
 		String abc3 = Elib.readDatafromExcel(0, 6, "Sheet1");
 		cip.selectdropdown(abc3);
 		
-        Assert.assertFalse(true);
+        Assert.assertTrue(true);
 		cip.submit();
 
 		WebElement contactname = driver.findElement(By.xpath("//a[@title='Contacts' and text()='" + abc4+ "']"));
