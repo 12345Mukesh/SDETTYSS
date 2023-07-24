@@ -11,14 +11,6 @@
     
     
  
-  <test name="Test1">
-  <parameter name="browser" value="chrome"></parameter>
-    <classes>
-      <class name="com.Vtiger.PomScripts.Tc_001_CreateOrg_DD_Test"/>
-    </classes>
-  </test> <!-- Test -->
-  
-  
   
   <test name="Test2">
   <parameter name="browser" value="Firefox"></parameter>

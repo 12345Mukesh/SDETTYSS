@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="CreateContactOrg">
+  <parameter name="browser" value="chrome"></parameter>
     <classes>
       <class name="com.Vtiger.PomScripts.Tc_002_CreateContact_org_Test"/>
     </classes>

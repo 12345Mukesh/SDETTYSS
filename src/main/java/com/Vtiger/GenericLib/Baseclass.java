@@ -49,13 +49,13 @@ public class Baseclass implements IAutoConstant
 	 */
 	
 	
-   //	@Parameters("browser")
+   	@Parameters("browser")
 	
     @BeforeClass(groups={"smoke","sanity","regression"})
-    public void launchbrowser() throws Throwable
+    public void launchbrowser(String browsername) throws Throwable
     {
 		
-    	String browsername=fileutility.readDatafromPropfile("browser");
+    	//String browsername=fileutility.readDatafromPropfile("browser");
 		
     	if
     	(browsername.equalsIgnoreCase("chrome"))

@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Test1(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.Vtiger.PomScripts.Tc_002_CreateContact_org_Test">
+        <methods>
+          <include name="launchbrowser"/>
+          <include name="logindetails"/>
+          <include name="CreateContactTestWindowHandle"/>
+          <include name="closebrowser"/>
+          <include name="startconnection"/>
+          <include name="closeconnection"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- com.Vtiger.PomScripts.Tc_002_CreateContact_org_Test -->
+    </classes>
+  </test> <!-- Test1(failed) -->
   <test thread-count="5" parallel="tests" name="Test(failed)">
+    <parameter name="browser" value="edge"/>
     <classes>
       <class name="com.Vtiger.PomScripts.Tc_001_CreateContact_Test">
         <methods>
