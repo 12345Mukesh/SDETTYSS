@@ -7,10 +7,38 @@
 	<properties>
 		<jre.level>1.8</jre.level>
 		<jdk.level>1.8</jdk.level>
+		<aspectj.version>1.8.10</aspectj.version>
 	</properties>
+	
+	
+	<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.20</version>
+            <configuration>
+                <argLine>
+                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                </argLine>
+                <suiteXmlFiles>
+                <suiteXmlFile>CreateContactTest.xml</suiteXmlFile>
+                </suiteXmlFiles>
+            </configuration>
+            <dependencies>
+                <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjweaver</artifactId>
+                    <version>1.9.7</version>
+                </dependency>
+            </dependencies>
+        </plugin>
+    </plugins>
+</build>
+	
 	<profiles>
 		<profile>
-			<id>Smoketest</id>
+			<id>smoketest</id>
 			<build>
 				<plugins>
 					<!-- Compiler plug-in -->
@@ -114,7 +142,6 @@
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
-
 			<artifactId>poi</artifactId>
 			<version>5.0.0</version>
 		</dependency>
@@ -124,6 +151,15 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.0.0</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-testng</artifactId>
+    <version>2.23.0</version>
+</dependency>
+
+		
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -143,15 +179,9 @@
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>5.3.3</version>
+			<version>5.4.1</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->
-		<dependency>
-			<groupId>ru.yandex.qatools.ashot</groupId>
-			<artifactId>ashot</artifactId>
-			<version>1.5.3</version>
-		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>

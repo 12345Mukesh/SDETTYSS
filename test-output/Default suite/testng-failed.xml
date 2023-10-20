@@ -3,17 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Vtiger.PomScripts.Tc_002_CreateContact_org_Test">
+      <class name="JavaScript.LoginUsingHubAndNode">
         <methods>
-          <include name="launchbrowser"/>
-          <include name="logindetails"/>
-          <include name="CreateContactTestWindowHandle"/>
-          <include name="closebrowser"/>
-          <include name="startconnection"/>
-          <include name="closeconnection"/>
-          <include name="logout"/>
+          <include name="run"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.Vtiger.PomScripts.Tc_002_CreateContact_org_Test -->
+      </class> <!-- JavaScript.LoginUsingHubAndNode -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -5,20 +5,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.Vtiger.GenericLib.Baseclass;
 import com.Vtiger.GenericLib.WebDriverUtility;
 
 
 
-public class ContactInfopage
+public class ContactInfopage extends Baseclass
 {
 
-	
-WebDriver driver;
+	WebDriver sdriver;
+
 	
 	public ContactInfopage(WebDriver driver) 
 	{
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		this.driver = sdriver;
+		PageFactory.initElements(sdriver, this);
 	}
 
 

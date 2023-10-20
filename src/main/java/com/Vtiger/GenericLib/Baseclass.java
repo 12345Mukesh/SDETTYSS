@@ -49,9 +49,11 @@ public class Baseclass implements IAutoConstant
 	 */
 	
 	
-   	@Parameters("browser")
+   
 	
     @BeforeClass(groups={"smoke","sanity","regression"})
+    
+	@Parameters("browser")
     public void launchbrowser(String browsername) throws Throwable
     {
 		
@@ -88,7 +90,7 @@ public class Baseclass implements IAutoConstant
     		System.out.println("No browser attached");
     	}
     	
-    	sdriver=driver;
+    	//sdriver=driver;
     	driver.get(fileutility.readDatafromPropfile("URL"));
     	driver.manage().window().maximize();
     }

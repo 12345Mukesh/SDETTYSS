@@ -15,12 +15,25 @@ import com.Vtiger.GenericLib.JavaUtility;
 import ObjectRepo.ContactInfopage;
 import ObjectRepo.CreateNewContactPage;
 import ObjectRepo.HomePage;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
+import io.qameta.allure.Story;
 
 
 @Listeners(com.Vtiger.GenericLib.ReportListeners.class)
 public class Tc_001_CreateContact_Test extends Baseclass
 {
 	@Test()
+	@Description("Creating new contact in the VTiger Application")
+	@Epic("EP005")
+	@Feature("Feature 1: New Contact Creating")
+	@Story("Adding New contact and verifying in Home page")
+	@Step("Contact Creating with Random number")
+	@Severity(SeverityLevel.CRITICAL)
 	public void TC001_CreateContact() throws Throwable
 	{
 
